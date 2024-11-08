@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        legend,p{
+           text-align: center;
+        }
+        legend{
+            font-size: 2rem;
+        }
+        fieldset{
+            width: 35vw;
+            margin: 0px auto;
+            background-color: aqua;
+            border-radius: 15px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            max-width: 30vw;
+            margin: 0px auto;
+        }
+        input,button{
+            height: 30px;
+            border-radius: 15px;
+        }
+        button{
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="">
+        <input type="text" name="userName" id="name" required minlength="3" maxlength="18" pattern="^[a-zA-Z]{3,18}$" title="doens't matched the propeties">
+        <input type="text" name="" id="" required minlength="3" maxlength="18" pattern="^[a-zA-Z!@#$&*-_]{8,}$" title="doesn't matched the propeties">
+        <button type="submit">Submit</button>
+    </form> -->
+    <fieldset>
+        <legend>Login</legend>
+        
+    <form action="" onsubmit="validation(event)">
+        <input type="text" name="userName" id="name" placeholder="Enter Name" required>
+        <input type="email"name="email" id="email" placeholder="Enter Email" required>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required>
+        <input type="password" name="confirmPassword" id="conPassword" placeholder="Confirm Password" required>
+        <button >Submit</button>
+    </form>
+    </fieldset>
+    <p style="color: red;" id="error"></p>
+    <script src="form.js"></script>
+</body>
+</html>
