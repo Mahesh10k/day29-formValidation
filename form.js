@@ -13,10 +13,10 @@ function validation(event){
     let p_pattern=/^[a-zA-Z0-9!@#%^&*.]{8,}/
 
     if(!n_pattern.test(name)){  
-        errorMessage.textContent="Name Should contains Capital and Small letters and length of 8 letters."
+        errorMessage.textContent="Name Should contains Capital and Small letters and length of minimum 3 characters."
     }
     else if(password.length<8){
-        errorMessage.textContent="The Password should be length of 8 characters."
+        errorMessage.textContent="The Password should be length of minimum 8 characters."
     }
     else if(!email_pattern.test(email)){
         errorMessage.textContent="The Email Should contains Alphabets, Numbers only. Eg:me1@gmail.com"
